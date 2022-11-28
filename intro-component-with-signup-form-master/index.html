@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!--for icons-->
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+
+</head>
+<body>
+
+  <main>
+    <div class="section intro-section">
+      <div class="intro-content">
+        <h1 class="main-heading">Learn to code by watching others</h1>
+      <p class="main-para">
+        See how experienced developers solve problems in real-time. Waching scripted tutorials is great, but understanding how developers think is invaluable.
+      </p>
+      </div>
+    </div>
+
+    <div class="section form-section">
+      <div class="btn-try-it-container">
+        <button type="submit" class="btn-try-it">
+          <b>Try it free 7 days</b> then $20/mo. thereafter
+        </button>
+      </div>
+
+      <div class="form-container">
+        <form action="#">
+
+          <div class="first-name-container input">
+            <input type="text" name="first-name" id="first-name" placeholder="First Name" required> <br>
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+            
+            <div class="error"></div>
+          </div>
+
+          <div class="last-name-container input">
+            <input type="text" name="last-name" id="last-name" placeholder="Last Name" required> <br>
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+            
+            <div class="error"></div>
+          </div>
+
+          <div class="email-container input">
+            <input type="email" name="email" id="email" placeholder="Email" required> <br>
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+            
+            <div class="error"></div>
+          </div>
+          
+          <div class="email-container input">
+            <input type="password" name="password" id="password" placeholder="Password" required> <br>
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+            
+            <div class="error"></div>
+          </div>
+
+          <button type="submit" class="btn-claim">CLAIM YOUR FREE TRAIL</button>
+
+          <p class="terms-and-conditions">
+            By clicking the button, you are agreeing to our <span class="t-a-s">Terms and Services</span>
+          </p>
+
+        </form>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
