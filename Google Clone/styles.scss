@@ -1,0 +1,125 @@
+$main-background-dark:#202124;
+$font-color-light: #202124;
+$font-color:#ffffff;
+$btn-background-sign-in:#1a73e8;
+$search-btn-bgcolor-light:#f8f9fa;
+$footer-bgcolor-light:#f2f2f2;
+$footer-border-light:#dadce0;
+$footer-font-color:#70757a;
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+%common {
+    display: flex;
+}
+
+header {
+    @extend %common;
+    justify-content: flex-end;
+    margin:1rem;
+    align-items: center;
+}
+
+header > a {
+    padding:1rem;
+    text-decoration: none;
+    color:$font-color-light;
+}
+
+header > span {
+    padding:1rem;
+    scale: 130%;
+    cursor: pointer;
+}
+
+
+
+.sign-in-btn {
+    padding:1rem 2rem;
+    font-size: 14px;
+    background-color: $btn-background-sign-in;
+    border:none;
+    border-radius: .4rem;
+    font-weight: bold;
+    color: $font-color;
+    margin:1rem;
+    cursor: pointer;
+}
+
+main {
+    @extend %common;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    height:60vh;
+}
+
+main > div {
+    padding:0.5rem;
+}
+
+form {
+    text-align: center;
+}
+
+form input {
+    margin:0.3rem;
+}
+
+input[type="text"] {
+    min-width: 300px;
+    width: 555px;
+    border-radius: 2rem;
+    height:44px;
+    border:1px solid #d7d9db;
+    padding:0.5rem 1.5rem 0.5rem 2.3rem;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    margin-top: 0.5rem;
+    border:none;
+    background-color: $search-btn-bgcolor-light;
+    padding:1rem;
+    color:$footer-font-color;
+    cursor: pointer;
+}
+
+form span {
+    position: absolute;
+    padding:16px;
+    color:#d7d9db;
+}
+
+footer {
+    @extend %common;
+    justify-content:space-between;
+    align-self: flex-end;
+    bottom: 0;
+    position:fixed;
+    width:100%;
+    padding: 1rem;
+    background-color: $footer-bgcolor-light;
+    border: 1px solid $footer-border-light;
+}
+
+footer div > a {
+    margin:0.7rem;
+    padding:0.2rem;
+    color:$footer-font-color;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
