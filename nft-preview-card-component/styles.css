@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%)
+}
+
+body {
+    background-color: var(--main-bg);
+}
+
+.container {
+    max-width: 355px;
+    background-color: var(--card-bg);
+    font-family: 'Outfit', sans-serif;
+    border-radius: 1em;
+    margin:auto;
+}
+
+.main-img {
+    width:100%;
+}
+
+h3 {
+    color:var(--white);
+}
+
+p {
+    color: var(--soft-blue);
+    font-size: 18px;
+}
+
+.main-img {
+    padding:18px 18px 0px 18px;
+    border-radius: 2em;
+}
+
+.card-content {
+    padding:0px 18px;
+}
+
+.band {
+    padding: 12px 0px;
+}
+
+.eth-icon {
+    vertical-align: middle;
+    padding-right:5px;
+}
+
+.eth {
+    color:var(--cyan);
+    font-weight: 600;
+}
+
+.time {
+    float:right;
+    color:var(--soft-blue);
+    font-weight: 400;
+}
+
+.clock-icon {
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+hr {
+    background-color:var(--line);
+    height: 1.4px;
+    border:none;
+}
+
+.card-footer {
+    color:var(--soft-blue);
+    padding:22px 0px;
+}
+
+.avatar {
+    height:33px;
+    width:33px;
+    vertical-align: middle;
+    border-radius: 50%;
+    border:1.4px solid var(--white);
+    margin-right:8px;
+}
+
+.avatar-name {
+    color:var(--white);
+}
