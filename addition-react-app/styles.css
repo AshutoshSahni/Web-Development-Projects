@@ -1,0 +1,53 @@
+* {
+    font-family: sans-serif;
+}
+
+#app {
+    text-align: center;
+}
+
+#problem {
+    font-size: 66px;
+}
+
+input {
+    width: 40%;
+    height:33px;
+    font-size: x-large;
+    text-align: center;;
+}
+
+#score {
+    font-size: x-large;
+    padding:5px;
+}
+
+#winner {
+    text-align: center;
+    font-size: xx-large;
+    color: green;
+    font-weight: bold;
+}
+
+.incorrect {
+    color:red;
+}
+
+#reset {
+    text-align: center;
+    margin:22px;
+}
+
+button {
+    padding:8px 14px;
+    font-size: large;
+    background-color: aliceblue;
+    color: #000;
+    border: 0.7px solid #000;
+    border-radius: .3em;
+    cursor: pointer;
+}
+
+ul {
+    line-height: 1.7;
+}

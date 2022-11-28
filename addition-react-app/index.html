@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>  
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+    <div id="app"></div>
+    <div id="reset"></div>
+
+    <hr>
+
+    <div class="rules-container">
+        <h1 class="rule-heading">Rules</h1>
+        <ul>
+            <li>Each correct answer will increment the score by 1.</li>
+            <li>Each incorrect answer will decrement the answer by 1.</li>
+            <li>You require score of 10 to win the game!</li>
+            <li>Reset the game anytime.</li>
+        </ul>
+    </div>
+
+    <script type="text/babel">
+
+        function Addition() {
+            const [states, setState] = React.useState({
+                num1 : Math.ceil(Math.random() * 10),
+                num2 : Math.ceil(Math.random() * 10),
+                response : "",
+                result : true,
+                score : 0
+            })
+
+            function updateInput(event) {
+                setState({
+                    ...states,
+                    response : event.target.value
+                });
+            }
+
+            function checkAnswer(event) {
+                if(event.key === "Enter") {
+                    const answer = parseInt(states.response);
+                    if(states.num1 + states.num2 === answer) {
+                        setState({
+                            ...states,
+                            num1 : Math.ceil(Math.random() * 10),
+                            num2 : Math.ceil(Math.random() * 10),
+                            result : true,
+                            score : states.score + 1,
+                            response : ""
+                        });
+                    } else {
+                        setState({
+                            ...states,
+                            score : states.score - 1,
+                            result : false,
+                            response : ""
+                        });
+                    }
+                }
+            }
+
+            if(states.score === 10) {
+                return (
+                    <div id="winner">You Won!</div>
+                );
+            }
+
+            return (
+                <div>
+                    <div className={states.result ? "" : "incorrect"} id="problem">{states.num1} + {states.num2}</div>
+                    <input autoFocus={true} onKeyPress={checkAnswer} value={states.response} onChange={updateInput} />
+
+                    <div id="score">Score = {states.score}</div>
+                </div>
+            );
+        }
+
+
+        function Reset() {
+            function reset() {
+                window.location.reload(false);
+            }
+
+            return (
+                <button onClick={reset}>Reset</button>
+            );
+        }
+
+        ReactDOM.render(<Addition />, document.querySelector('#app'));
+        ReactDOM.render(<Reset />, document.querySelector('#reset'));
+
+    </script>
+
+</body>
+</html>
